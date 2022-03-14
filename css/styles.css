@@ -1,24 +1,56 @@
-    /*abaixo eu coloquei a fonte do google fonts, onde eu escolhi 3 e peguei o link la*/
+/*abaixo eu coloquei a fonte do google fonts, onde eu escolhi 3 e peguei o link la*/
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
-
-
+/*abaixo a gente declara variaveis para que, nao possa ser colocado toda hora as cores, e sim as variaveis.*/
+:root{
+    --bg-gray: #ddd;
+    --color-primary: #4D41C0;
+    --white: #fff
+}
 * {
+    margin: 0;
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+}   
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
 }
+/*abaixo eu coloquei a cor de fundo, sendo a variavel que eu especifiquei acima*/
 html, body {
-    background-color: #ddd;
-}
+    background-color: var(--bg-gray);
+}   
+/*abaixo eu coloquei a cor do cabecalho e da letra, usando a variavél que eu declarei la em cima*/
 header{
-    background-color: #4D41C0;
-    color: #fff
-}
+    background-color: var(--color-primary);
+    color: var(--white);
+    height: 60px;
+    display: flex;
+    align-items: center;
+}   
+/*abaixo eu coloquei as formatacoes para os dados no cabecalho, como alinhamento e etc*/
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+nav h1 { 
+/*aqui eu mudo o tamanho da fonte, e o peso, sendo esse peso a expessura*/
+    font-size: 24px;
+    font-weight: 700;
+}
+nav a {
+/*aqui eu mudei o tamanho e a expessura do link do meu github*/
+    font-size: 12px;
+    font-weight: 400;
+}
 a, a:hover {
     text-decoration: none;
     color: unset;
+}
+/*aqui eu coloquei para que a icone do github ficasse alinhado com o link do gihtub*/
+.dsmovie-contact-container {
+    display : flex;
+    align-items: center;
+}/*pegando o gancho acima, eu coloquei para a imagem ficar 10px longe do link do git*/
+.dsmovie-contact-container img{
+    margin-right: 10px;
 }
